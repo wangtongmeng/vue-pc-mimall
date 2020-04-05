@@ -7,11 +7,22 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import jsonp from 'jsonp'
 
 export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  mounted() {
+    const url = 'https://order.imooc.com/pay/cartorder'
+    jsonp(url, {
+      name: 'jsonpcallback'
+    }, function (err, data) {
+      console.log(1);
+      
+      console.log(err, data)
+    })
   }
 }
 </script>
