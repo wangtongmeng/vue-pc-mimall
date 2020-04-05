@@ -15,7 +15,7 @@ export default {
     HelloWorld
   },
   mounted() {
-    const url = 'https://order.imooc.com/pay/cartorder'
+    const url = 'api/pay/cartorder'
     jsonp(url, {
       name: 'jsonpcallback'
     }, function (err, data) {
