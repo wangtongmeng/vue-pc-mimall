@@ -1,28 +1,15 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import jsonp from 'jsonp'
-
 export default {
   name: 'App',
   components: {
-    HelloWorld
   },
   mounted() {
-    const url = 'api/pay/cartorder'
-    jsonp(url, {
-      name: 'jsonpcallback'
-    }, function (err, data) {
-      console.log(1);
-      
-      console.log(err, data)
-    })
   }
 }
 </script>
