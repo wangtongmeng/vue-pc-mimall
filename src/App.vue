@@ -6,12 +6,20 @@
 
 <script>
 export default {
-  name: 'app',
-  components: {
+  name: "app",
+  components: {},
+  data() {
+    return {
+      res: {}
+    };
   },
   mounted() {
+    // 本地加载请求静态json文件的形式
+    this.axios.get("/mock/user/login.json").then(res => {
+      this.res = res
+    });
   }
-}
+};
 </script>
 
 <style>
