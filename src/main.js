@@ -12,7 +12,8 @@ if (mock) {
 }
 
 // 根据前端的跨域方式做调整 例如，代理的方式： /a/b /api/a/b => /a/b
-axios.defaults.baseURL = '/api' // '/api'的形式 适用于代理的跨域
+// axios.defaults.baseURL = '/api' // '/api'的形式 适用于代理的跨域
+axios.defaults.baseURL = 'https://easy-mock.com/mock/5e8c979ede14c07ce4b4f488/api' // easy mock地址
 // axios.defaults.baseURL = env.baseURL
 axios.defaults.timeout = 8000
 // 接口错误拦截
