@@ -37,8 +37,11 @@
           </div>
         </div>
         <div class="header-search">
-          <input type="text" name="keyword" />
-          <a href="javascript:;"></a>
+          <div class="wrapper">
+            <input type="text" name="keyword" />
+            <!-- 使用a标签，是因为鼠标悬浮有小手效果 -->
+            <a href="javascript:;"></a>
+          </div>
         </div>
       </div>
     </div>
@@ -92,7 +95,7 @@ export default {
         display: inline-block;
         width: 55px;
         height: 55px;
-        background-color: #FF6600;
+        background-color: #ff6600;
         a {
           display: inline-block;
           width: 110px;
@@ -104,7 +107,7 @@ export default {
             height: 55px;
             background: url("/imgs/mi-logo.png") no-repeat center;
             background-size: 55px;
-            transition: margin .2s;
+            transition: margin 0.2s;
           }
           &:after {
             content: " ";
@@ -116,7 +119,50 @@ export default {
           }
           &:hover:before {
             margin-left: -55px;
-            transition: margin .2s;
+            transition: margin 0.2s;
+          }
+        }
+      }
+      .header-menu {
+        display: inline-block;
+        // width: 200px;
+        padding-left: 209px;
+        .item-menu {
+          display: inline-block;
+          color: #333333;
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 112px;
+          margin-right: 20px;
+          span {
+            cursor: pointer;
+          }
+          &:hover {
+          }
+        }
+      }
+      .header-search {
+        width: 319px;
+        .wrapper {
+          height: 50px;
+          border: 1px solid #E0E0E0;
+          display: flex;
+          align-items: center;
+          input {
+            border: none;
+            box-sizing: border-box;
+            border-right: 1px solid #E0E0E0;
+            width: 264px;
+            height: 50px;
+            padding-left: 14px;
+          }
+          a {
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            background: url('/imgs/icon-search.png') no-repeat center;
+            background-size: contain;
+            margin-left: 17px;
           }
         }
       }
