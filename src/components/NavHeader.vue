@@ -125,7 +125,7 @@ export default {
       }
       .header-menu {
         display: inline-block;
-        // width: 200px;
+        width: 643px;
         padding-left: 209px;
         .item-menu {
           display: inline-block;
